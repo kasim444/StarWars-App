@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/StarWars-App/static/css/main.76d8d9a9.chunk.css",
+    "main.js": "/StarWars-App/static/js/main.2d2b44b9.chunk.js",
+    "main.js.map": "/StarWars-App/static/js/main.2d2b44b9.chunk.js.map",
+    "runtime~main.js": "/StarWars-App/static/js/runtime~main.2676381e.js",
+    "runtime~main.js.map": "/StarWars-App/static/js/runtime~main.2676381e.js.map",
+    "static/js/2.72f27249.chunk.js": "/StarWars-App/static/js/2.72f27249.chunk.js",
+    "static/js/2.72f27249.chunk.js.map": "/StarWars-App/static/js/2.72f27249.chunk.js.map",
+    "index.html": "/StarWars-App/index.html",
+    "precache-manifest.f6a49e420856ed191258f160d0bcf2e8.js": "/StarWars-App/precache-manifest.f6a49e420856ed191258f160d0bcf2e8.js",
+    "service-worker.js": "/StarWars-App/service-worker.js",
+    "static/css/main.76d8d9a9.chunk.css.map": "/StarWars-App/static/css/main.76d8d9a9.chunk.css.map",
+    "static/media/C-3PO.webp": "/StarWars-App/static/media/C-3PO.7cb0ec51.webp",
+    "static/media/Darth-Vader.webp": "/StarWars-App/static/media/Darth-Vader.8d7da71c.webp",
+    "static/media/Star-Wars-Attack-Clones-II-Poster.jpeg": "/StarWars-App/static/media/Star-Wars-Attack-Clones-II-Poster.c10dcdeb.jpeg",
+    "static/media/Star-Wars-New-Hope-IV-Poster.webp": "/StarWars-App/static/media/Star-Wars-New-Hope-IV-Poster.c17b8220.webp",
+    "static/media/Star-Wars-Phantom-Menace-I-Poster.webp": "/StarWars-App/static/media/Star-Wars-Phantom-Menace-I-Poster.20dad059.webp",
+    "static/media/Star-Wars-Revenge-Sith-III-Poster.webp": "/StarWars-App/static/media/Star-Wars-Revenge-Sith-III-Poster.d2d262d6.webp",
+    "static/media/luke-skywalker.jpeg": "/StarWars-App/static/media/luke-skywalker.ae2b8b90.jpeg",
+    "static/media/r2-d2.jpeg": "/StarWars-App/static/media/r2-d2.3d0426fc.jpeg",
+    "static/media/star-wars-banner.jpg": "/StarWars-App/static/media/star-wars-banner.bdeb1fac.jpg"
+  }
+}

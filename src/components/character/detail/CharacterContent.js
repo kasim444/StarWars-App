@@ -16,8 +16,7 @@ const CharacterContent = props => {
   const {
     films,
     homeworld
-  } = props
-  console.log(props);
+  } = props;
   return (
     <div className="characterContent">
       <div className="characterPoster">

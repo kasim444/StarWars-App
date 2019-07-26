@@ -12,9 +12,12 @@ const CharacterContent = props => {
     skin_color,
     eye_color,
     gender,
-    homeworld,
-    films,
   } = props.characterInfo;
+  const {
+    films,
+    homeworld
+  } = props
+  console.log(props);
   return (
     <div className="characterContent">
       <div className="characterPoster">

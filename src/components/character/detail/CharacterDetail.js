@@ -4,7 +4,7 @@
 /* eslint-disable camelcase */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable no-unused-vars */
-import React, {Component, useEffect} from 'react';
+import React, { Component, useEffect } from 'react';
 import axios from 'axios';
 import Loading from '../../placeholder/Loading';
 import DetailHeader from './DetailHeader';
@@ -35,7 +35,6 @@ const characterAvatarLink = [
   darthVader,
 ];
 
-
 function CharacterDetail(props) {
   const { id: characterId } = props.match.params;
   const [isLoading, setIsLoading] = React.useState(true);
@@ -45,11 +44,8 @@ function CharacterDetail(props) {
 
   React.useEffect(() => {
     async function getData() {
-      const characterDetail = await axios.get(`https://swapi.co/api/people/${characterId}/`);
-      const {
-        homeworld: homeworldLink,
-        films: filmsFetchLinks
-      } = characterDetail.data;
+      const characterDetail = await axios.get(`https://swapi.dev/api/people/${characterId}/`);
+      const { homeworld: homeworldLink, films: filmsFetchLinks } = characterDetail.data;
 
       const promisesData = await filmsFetchLinks.map(link => axios.get(link));
 
@@ -70,7 +66,6 @@ function CharacterDetail(props) {
     getData();
   }, [characterId]);
 
-
   return isLoading ? (
     <Loading />
   ) : (
@@ -89,80 +84,3 @@ function CharacterDetail(props) {
   );
 }
 export default CharacterDetail;
-
-//   //  async componentDidMount () {
-
-    // const filmSeries = [];
-    // const characterDetail = await axios.get (
-    //   `https://swapi.co/api/people/${characterId}/`
-    // );
-
-
-    // const filmsFetchLinks = characterDetail.data.films;
-
-    // const promisesData = await filmsFetchLinks.map(link => axios.get(link));
-    // axios.all (promisesData).then(value => {
-    //   value.map (val => filmSeries.push (val.data.title));
-    //   let {
-    //     name,
-    //     height,
-    //     mass,
-    //     hair_color,
-    //     skin_color,
-    //     eye_color,
-    //     birthday_year,
-    //     gender,
-    //     homeworld,
-    //     films,
-    //   } = characterDetail.data;
-
-    //   fetch(homeworld).then(home => home.json()).then(val => this.setState({homeworld: val.name}));
-
-
-    //   this.setState ({
-    //     name,
-    //     height,
-    //     mass,
-    //     hair_color,
-    //     skin_color,
-    //     eye_color,
-    //     birthday_year,
-    //     gender,
-    //     films: filmSeries,
-    //     loading: false,
-    //   });
-    // });
-//   // }
-
-
-//   render () {
-//     const characterId = this.props.match.params.id;
-//     const {
-//       name,
-//       height,
-//       mass,
-//       hair_color,
-//       skin_color,
-//       eye_color,
-//       birthday_year,
-//       gender,
-//       homeworld,
-//       loading,
-//     } = this.state;
-//     return loading
-//       ? <Loading />
-//       : (
-//         <div>
-//           <main className="characterBg">
-//             <DetailHeader imgLink={characterAvatarLink[characterId - 1]} />
-//             <CharacterContent
-//               imgLink={characterAvatarLink[characterId- 1]}
-//               characterInfo={this.state}
-//             />
-//           </main>
-//           <FeaturedCharacters />
-//         </div>
-//       );
-//   }
-// }
-// export default CharacterDetail;

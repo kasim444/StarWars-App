@@ -21,11 +21,9 @@ function FeauteredMovies() {
   const [loading, setLoading] = useState(true);
 
   const fetchMovies = async () => {
-    const data = await fetch('https://swapi.co/api/films/');
+    const data = await fetch('https://swapi.dev/api/films/');
     const moviesData = await data.json();
-    const feauteredMovies = moviesData.results.filter(
-      (movie) => movie.episode_id <= 4
-    );
+    const feauteredMovies = moviesData.results.filter(movie => movie.episode_id <= 4);
     setMovies(feauteredMovies.sort(SortByEpisode));
     setLoading(false);
   };

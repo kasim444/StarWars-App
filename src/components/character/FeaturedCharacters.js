@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
 // import child component styles
 import CharacterCard from './CharacterCard';
@@ -15,37 +15,37 @@ import darthVader from '../../img/characters/Darth-Vader.webp';
 
 const characterAvatarLink = [lukeSkywalker, C3PO, r2d2, darthVader];
 
-function FeaturedCharacters () {
-  const [characters, setCharacters] = useState ([]);
-  const [loading, setLoading] = useState (true);
+function FeaturedCharacters() {
+  const [characters, setCharacters] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const fetchCharacters = async () => {
-    const data = await fetch ('https://swapi.co/api/people/');
-    const fetchPeople = await data.json ();
-    const feauteredCharacter = fetchPeople.results.filter (
-      (character, index) => index < 4
-    );
-    setCharacters (feauteredCharacter);
-    setLoading (false);
+    const data = await fetch('https://swapi.dev/api/people/');
+    const fetchPeople = await data.json();
+    const feauteredCharacter = fetchPeople.results.filter((character, index) => index < 4);
+    setCharacters(feauteredCharacter);
+    setLoading(false);
   };
-  useEffect (() => {
-    fetchCharacters ();
+  useEffect(() => {
+    fetchCharacters();
   }, []);
 
   return (
     <div>
       <h2>Popular Characters</h2>
       <div className="d-flex-row container">
-        {loading
-          ? <PlaceholderDiv />
-          : characters.map ((character, index) => (
+        {loading ? (
+          <PlaceholderDiv />
+        ) : (
+          characters.map((character, index) => (
             <CharacterCard
               key={character.name}
               chaId={index + 1}
               chaDet={character.name}
               imgLink={characterAvatarLink[index]}
             />
-            ))}
+          ))
+        )}
       </div>
     </div>
   );
